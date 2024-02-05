@@ -69,4 +69,5 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidt
 plt.title('Correlation Heatmap')
 plt.show()
 ```
+![alt text](image.png)
 
