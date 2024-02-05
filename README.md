@@ -50,7 +50,6 @@ where:
   - (1) indicates a perfect positive linear correlation,
   - (-1) indicates a perfect negative linear correlation,
   - (0) indicates no linear correlation.
-  - 
 By calculating the correlation matrix, you can quickly understand how different variables in your dataset are related to each other. This is valuable for various data analysis tasks, such as:
 
 1. Identifying Relationships: You can identify which variables have strong positive or negative relationships. For example, if the correlation coefficient between two variables is close to 1, it suggests a strong positive correlation, and if it's close to -1, it suggests a strong negative correlation.
@@ -60,3 +59,14 @@ By calculating the correlation matrix, you can quickly understand how different 
 1. Feature Selection: In machine learning, you might use the correlation matrix to identify and remove highly correlated features, reducing redundancy in your feature set.
 
 1. Data Exploration: Exploring the correlation matrix can provide insights into the structure of the data and guide further analysis.
+```python
+# Calculate the correlation matrix
+correlation_matrix = df.corr()
+
+# Create a heatmap with correlation values
+plt.figure(figsize=(8, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidths=.5)
+plt.title('Correlation Heatmap')
+plt.show()
+```
+
