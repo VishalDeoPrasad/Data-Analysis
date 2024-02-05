@@ -71,3 +71,37 @@ plt.show()
 ```
 ![alt text](image.png)
 
+# Outliers or Anomalous
+
+using the LocalOutlierFactor (LOF) algorithm from the sklearn.neighbors module to detect outliers in your dataset. Let me break down the code and explain each part:
+
+```python
+from sklearn.neighbors import LocalOutlierFactor
+```
+
+LocalOutlierFactor is a class from the scikit-learn library that implements the Local Outlier Factor algorithm for outlier detection.
+
+```python
+Instantiate the LOF Model:
+model = LocalOutlierFactor()
+```
+You create an instance of the LocalOutlierFactor class. The default settings are used, but you can also specify parameters such as n_neighbors and contamination based on your data and requirements.
+
+```python
+#Fit the Model:
+model.fit(df)
+```
+You fit the LOF model to your DataFrame (df). This step involves calculating the LOF scores for each data point in the dataset.
+
+```python
+#Predict Anomaly Scores:
+df['lof_anomaly_score'] = model.fit_predict(df)
+```
+
+You predict the anomaly scores for each data point using the fit_predict method of the LOF model. The resulting anomaly scores are added as a new column, 'lof_anomaly_score', to your DataFrame (df).
+
+'lof_anomaly_score', representing the anomaly scores assigned by the Local Outlier Factor algorithm. 
+  - Negative scores typically indicate outliers,
+  - and the more negative the score, the more likely the point is considered an outlier.
+  - You can further analyze or visualize these scores to identify and understand potential outliers in your dataset.
+
