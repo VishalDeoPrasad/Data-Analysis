@@ -105,3 +105,5 @@ You predict the anomaly scores for each data point using the fit_predict method 
   - and the more negative the score, the more likely the point is considered an outlier.
   - You can further analyze or visualize these scores to identify and understand potential outliers in your dataset.
 
+KNN imputer
+
