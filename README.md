@@ -171,5 +171,6 @@ You predict the anomaly scores for each data point using the fit_predict method 
     
 ❓ Provides tools to quantify and handle uncertainty, crucial in deep learning and reinforcement learning.
 
+![image](https://github.com/VishalDeoPrasad/Data-Analysis/assets/44454324/23324b66-d669-47d2-b6b2-6f973a9035d5)
 In summary, statistics is the backbone of data science, machine learning, and AI, providing essential tools to extract insights, validate assumptions, make predictions, and build robust models.
 
